@@ -11,10 +11,7 @@ $(function() {
     // 点击播放
     $(".box").on("click", function() {
         // setTimeout(function() {
-
         // }, 500)
-
-
         videoBg.src = "./video/bg.mp4";
         videoBg.play();
 
@@ -166,13 +163,13 @@ function page1() {
 };
 
 function page2() {
-    $(".page1").addClass("opacity-hide");
-    // $(".page1").css("opacity","0");
+    // $(".page1").css("background-color", "red");
+
+    $(".page2").css("display", "block");
+
     setTimeout(function() {
         $(".page1").css("display", "none");
-        $(".page1").removeClass("opacity-hide");
 
-        $(".page2").css("display", "block");
         videoBg.pause();
         myVideo.load();
         myVideo.pause();
