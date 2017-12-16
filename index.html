@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="author" content="CCcat">
+	<title>品匠心《神舞幻想》邀请函</title>
+	<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+	<link rel="icon" type="image/x-icon" href="favicon.ico">
+	<link rel="stylesheet" href="index.css">
+	<link rel="stylesheet" href="http://cache.amap.com/lbs/static/main.css?v=1.0?v=1.0">
+	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+	<script src="http://cache.amap.com/lbs/static/es5.min.js"></script>
+	<script type="text/javascript" src="http://webapi.amap.com/maps?v=1.4.2&key=25ca95144df6f1dc33cdd8ed867728a8&plugin=AMap.ToolBar"></script>
+	<script src="https://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
+	<script src="controllers.js"></script>
+	<script src="index.js"></script>
+	<!--[if lt IE 9]>　　　　
+	<script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+	<![endif]-->
+</head>
+<body>
+<div class="container">
+	<div class="page page1" id="page1" style="display:block">
+		<img class="box" src="images/loading.png" alt="loading pic">
+		<div id="music">
+			<div class="audio-icon">
+			</div>
+			<div class="audio-bg">
+			</div>
+		</div>
+		<video id="videoBg" src="" type="video/mp4" preload="auto" -webkit-playsinline playsinline x5-video-orientation="portrait" x5-video-player-type="h5" x5-video-player-fullscreen="true" width="1" height="1" muted>您的浏览器不支持此种视频格式。</video>
+	</div>
+	<div class="page page2" id="page2" style="display:none">
+		<img class="pic" src="images/bg-iInvite.png" alt="pic">
+		<div class="btn-loop">
+		</div>
+		<div class="video-box">
+			<img class="pic-show" src="images/pic-show.png">
+			<div id="btnVideo" class="btn-video">
+			</div>
+			<video id="myVideo" src="video/video.mp4" type="video/mp4" pause -webkit-playsinline playsinline>您的浏览器不支持此种视频格式。</video>
+		</div>
+		<div class="btn-map" title="点击导航">
+			<img class="pic-txt" src="images/pic-txt.png" alt="pic">
+			<div id="mapContainer">
+			</div>
+		</div>
+		<img class="pic-share" src="images/pic-share.png" title="分享">
+		<div class="btn-share effect-shaking" title="分享神舞">
+		</div>
+	</div>
+</div>
+</body>
+</html>
