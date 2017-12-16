@@ -10,21 +10,39 @@ $(function() {
 
     // 点击播放
     $(".box").on("click", function() {
-        // setTimeout(function() {
-        // }, 500)
+
+        $(this).addClass("opacity-hide");
+        $(this).css("opacity", "0");
+
         videoBg.src = "./video/bg.mp4";
         videoBg.play();
 
-        // setTimeout(function() {
-        audioTrue();
-        videoBg.muted = false;
-
-        // }, 100);
         setTimeout(function() {
             $(".box").css("display", "none");
-        }, 100);
+            setTimeout(function() {
+                audioTrue();
+                videoBg.muted = false;
+            }, 100);
+        }, 500);
+
+
         // console.log(videoBg.networkState);
     });
+
+
+    // $(".box").on("click", function() {
+
+    //       videoBg.src = "./video/bg.mp4";
+    //       videoBg.play();
+
+    //       audioTrue();
+
+    //       setTimeout(function() {
+    //           $(".box").css("display", "none");
+    //           videoBg.muted = false;
+    //       }, 1000);
+    //       // console.log(videoBg.networkState);
+    //   });
 
     $(".video-box").on("click", function() {
         $(".pic-show").css("display", "none");
@@ -102,7 +120,10 @@ function musicFun() {
         page1();
 
         videoBg.addEventListener('ended', function(e) {
-            page2();
+            setTimeout(function() {
+                page2();
+
+            }, 500);
         });
 
         $("#music").on("click", function() {
@@ -158,17 +179,20 @@ function page1() {
     audioTrue();
     setTimeout(function() {
         videoBg.muted = false;
+        $(".page1").css("background-image", "url(images/loading.png)");
 
     }, 300);
 };
 
 function page2() {
-    // $(".page1").css("background-color", "red");
-
+    $("#videoBg").addClass("opacity-hide");
     $(".page2").css("display", "block");
+    $(".page2").addClass("opacity-show1");
 
     setTimeout(function() {
         $(".page1").css("display", "none");
+        $(".page1").addClass("opacity-hide");
+        $(".page2").removeClass("opacity-show1");
 
         videoBg.pause();
         myVideo.load();
