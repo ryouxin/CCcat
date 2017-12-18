@@ -11,8 +11,10 @@ $(function() {
     // 点击播放
     $(".box").on("click", function() {
 
-        $(this).addClass("opacity-hide");
-        $(this).css("opacity", "0");
+        // $(this).addClass("opacity-hide");
+        // $(this).css("opacity","0");
+
+        $("#music").css("opacity", "1");
 
         videoBg.src = "./video/bg.mp4";
         videoBg.play();
@@ -25,24 +27,9 @@ $(function() {
             }, 100);
         }, 500);
 
-
         // console.log(videoBg.networkState);
     });
 
-
-    // $(".box").on("click", function() {
-
-    //       videoBg.src = "./video/bg.mp4";
-    //       videoBg.play();
-
-    //       audioTrue();
-
-    //       setTimeout(function() {
-    //           $(".box").css("display", "none");
-    //           videoBg.muted = false;
-    //       }, 1000);
-    //       // console.log(videoBg.networkState);
-    //   });
 
     $(".video-box").on("click", function() {
         $(".pic-show").css("display", "none");
@@ -170,6 +157,7 @@ function audioFalse() {
 }
 
 function page1() {
+    $(".page1").css("background-image", "");
     $(".page1").css("display", "block");
     $(".page2").css("display", "none");
     videoBg.load();
@@ -179,12 +167,11 @@ function page1() {
     audioTrue();
     setTimeout(function() {
         videoBg.muted = false;
-        $(".page1").css("background-image", "url(images/loading.png)");
-
     }, 300);
 };
 
 function page2() {
+    $(".page1").css("background-image", "url(images/bg-iInvite.png)");
     $("#videoBg").addClass("opacity-hide");
     $(".page2").css("display", "block");
     $(".page2").addClass("opacity-show1");
@@ -216,7 +203,7 @@ function init() {
     })
     marker.setLabel({
         offset: new AMap.Pixel(24, 0), //修改label相对于maker的位置
-        content: "展易网898国<br>际会展中心"
+        content: "898国际会展中心"
     });
     marker.on('click', function(e) {
         marker.markOnAMAP({

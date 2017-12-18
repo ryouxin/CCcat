@@ -39,6 +39,12 @@ body {
 	position: relative
 }
 
+.page1 {
+	/*background-image: url(images/bg-iInvite.png);*/
+	background-repeat: no-repeat;
+	background-size: 100%;
+}
+
 input {
 	display: inline-block
 }
